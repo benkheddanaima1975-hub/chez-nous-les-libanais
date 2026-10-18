@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chez nous les Libanais – Restaurant libanais à Toulouse</title>
+<meta name="description" content="Restaurant et snack libanais au 6 rue Jean Suau, Toulouse. Sur place, à emporter ou en livraison.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0d2a1e;--green:#174a35;--gold:#cda550;--gold2:#e8d08e;--pom:#a11d3f;--paper:#f3f4ee;--card:#fff;--ink:#17201b;--muted:#53605a;--line:#d6dbcc;--head:#174a35;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0f1713;--card:#16211b;--ink:#eef0e6;--muted:#a3b0a7;--line:#2a382f;--head:#e8d08e;--pom:#ff8aa2;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0f1713;--card:#16211b;--ink:#eef0e6;--muted:#a3b0a7;--line:#2a382f;--head:#e8d08e;--pom:#ff8aa2;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif;padding-bottom:84px}
+h1,h2,h3{font-family:Amiri,Georgia,serif;margin:0;line-height:1.1}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+/* hero */
+.hero{background:var(--night);color:#f1efe4;position:relative;overflow:hidden;padding:44px 0 60px}
+.pat{position:absolute;inset:0;width:100%;height:100%;opacity:.2;-webkit-mask-image:linear-gradient(#000 20%,transparent 95%);mask-image:linear-gradient(#000 20%,transparent 95%)}
+.hero .wrap{position:relative;display:grid;gap:36px;align-items:center}
+.brand{font:700 20px Amiri,serif;color:var(--gold2);display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.brand a{font:600 15px Figtree,sans-serif;text-decoration:none;color:var(--gold2)}
+h1{font-size:clamp(50px,13vw,92px);font-weight:700;letter-spacing:-.01em}
+.lead{font-size:19px;max-width:32ch;margin:18px 0 28px;color:#dfe5d6}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--gold)}
+.btn.main{background:var(--gold);color:#0d2a1e}
+.btn.alt{color:var(--gold2)}
+.arch{justify-self:center;width:min(70vw,320px);aspect-ratio:3/4;border:2px solid var(--gold);border-radius:999px 999px 14px 14px;padding:9px}
+.arch>div{height:100%;border:1px solid var(--gold);border-radius:999px 999px 8px 8px;background:radial-gradient(circle at 50% 38%,#1d5a41,#0d2a1e 70%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:7%}
+.arch svg{width:74%;height:auto}
+.arch p{margin:6px 0 0;font:700 clamp(26px,7vw,34px)/1.2 Amiri,serif;color:var(--gold2)}
+@media(prefers-reduced-motion:no-preference){.arch svg{animation:rise 1.4s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(24px) scale(.94)}to{opacity:1;transform:none}}}
+/* faits */
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.facts div{padding:22px 4px 22px 16px;border-left:2px solid var(--gold)}
+.facts b{display:block;font:700 22px Amiri,serif;color:var(--head)}
+.facts span{font-size:15px;color:var(--muted)}
+section{padding:64px 0}
+h2{font-size:clamp(34px,7vw,52px);color:var(--head);font-weight:700}
+.sub{color:var(--muted);max-width:50ch;margin:12px 0 36px}
+/* carte */
+.menu{display:grid;gap:22px}
+.grp{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:4px 4px 14px 14px;padding:26px 24px}
+.grp h3{font-size:30px;color:var(--head);margin-bottom:12px}
+.grp dl{margin:0}
+.grp dt{font:700 22px Amiri,serif;margin-top:16px}
+.grp dd{margin:2px 0 0;color:var(--muted);font-size:16px}
+/* avis */
+.rev{background:var(--green);color:#f1efe4;position:relative;overflow:hidden}
+.rev .wrap{display:grid;gap:18px;justify-items:start}
+.rev h2{color:var(--gold2)}
+.score{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.score b{font:700 clamp(84px,22vw,140px)/.9 Amiri,serif;color:var(--gold2)}
+.stars{color:var(--gold);font-size:30px;letter-spacing:3px}
+/* venir */
+.info{display:grid;gap:30px}
+.info h3{font-size:26px;color:var(--head);margin-bottom:6px}
+.info p{margin:0}
+.big{font:700 30px/1.2 Amiri,serif;text-decoration:none;border-bottom:2px solid var(--gold)}
+footer{background:var(--night);color:#cfd8c9;padding:30px 0;font-size:15px;text-align:center}
+footer b{font:700 24px Amiri,serif;color:var(--gold2);display:block;margin-bottom:4px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--night);border-top:1px solid var(--gold)}
+.bar a{flex:1;text-align:center;padding:12px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--gold);color:var(--gold2)}
+.bar a:first-child{background:var(--gold);color:#0d2a1e}
+@media(min-width:760px){
+body{padding-bottom:0}.bar{display:none}
+.hero{padding:44px 0 90px}.hero .wrap{grid-template-columns:1.2fr .8fr}.brand{grid-column:1/-1}
+.facts{grid-template-columns:repeat(4,1fr)}
+.menu{grid-template-columns:repeat(3,1fr)}
+.info{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+<svg class="pat" aria-hidden="true"><defs><pattern id="p" width="64" height="64" patternUnits="userSpaceOnUse"><g fill="none" stroke="#cda550" stroke-width="1"><rect x="14" y="14" width="36" height="36"/><rect x="14" y="14" width="36" height="36" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="6"/></g></pattern></defs><rect width="100%" height="100%" fill="url(#p)"/></svg>
+<div class="wrap">
+<div class="brand" style="grid-column:1/-1"><span>Chez nous les Libanais</span><a href="tel:+33767039603">07 67 03 96 03</a></div>
+<div>
+<h1>Chez nous les Libanais</h1>
+<p class="lead">Restaurant et snack libanais au centre de Toulouse. Sur place, à emporter ou en livraison.</p>
+<div class="btns">
+<a class="btn main" href="tel:+33767039603">Appeler pour commander</a>
+<a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=6+Rue+Jean+Suau+31000+Toulouse">Itinéraire</a>
+</div>
+</div>
+<div class="arch" aria-hidden="true"><div>
+<svg viewBox="0 0 120 150"><rect x="57" y="30" width="6" height="108" fill="#a98838"/><g fill="#cda550"><ellipse cx="60" cy="34" rx="20" ry="8"/><ellipse cx="60" cy="58" rx="32" ry="10"/><ellipse cx="60" cy="84" rx="44" ry="12"/><ellipse cx="60" cy="112" rx="56" ry="13"/></g><g fill="#e8d08e" opacity=".55"><ellipse cx="60" cy="31" rx="14" ry="4"/><ellipse cx="60" cy="55" rx="22" ry="4"/><ellipse cx="60" cy="81" rx="30" ry="5"/><ellipse cx="60" cy="108" rx="40" ry="5"/></g></svg>
+<p lang="ar" dir="rtl">أهلاً وسهلاً</p>
+</div></div>
+</div>
+</header>
+
+<div class="wrap">
+<div class="facts">
+<div><b>10 à 20 €</b><span>par personne</span></div>
+<div><b>Terrasse</b><span>pour manger dehors</span></div>
+<div><b>Sans réservation</b><span>on s’installe directement</span></div>
+<div><b>Espèces</b><span>paiement en liquide uniquement</span></div>
+</div>
+</div>
+
+<section id="carte">
+<div class="wrap">
+<h2>La carte</h2>
+<p class="sub">Les grands classiques de la cuisine libanaise. La carte complète, avec les prix, est consultable sur Google Maps.</p>
+<div class="menu">
+<div class="grp"><h3>Les viandes</h3><dl>
+<dt>Chawarma</dt><dd>Viande effilée, en sandwich ou en assiette.</dd>
+<dt>Kefta</dt><dd>Brochette de viande hachée épicée.</dd>
+<dt>Chich taouk</dt><dd>Brochette de poulet mariné.</dd>
+</dl></div>
+<div class="grp"><h3>Les spécialités</h3><dl>
+<dt>Houmous</dt><dd>Crème de pois chiches au tahini.</dd>
+<dt>Labneh</dt><dd>Fromage frais de yaourt égoutté.</dd>
+<dt>Taboulé</dt><dd>Persil, tomate et citron.</dd>
+</dl></div>
+<div class="grp"><h3>Végétarien</h3><dl>
+<dt>Falafels</dt><dd>Boulettes de pois chiches frites.</dd>
+</dl></div>
+</div>
+<div class="btns" style="margin-top:34px"><a class="btn main" style="background:var(--green);color:#f1efe4;border-color:var(--green)" href="https://www.google.com/maps/search/?api=1&amp;query=Chez+nous+les+Libanais+Toulouse">Voir la carte complète</a></div>
+</div>
+</section>
+
+<section class="rev" id="avis">
+<div class="wrap">
+<h2>Les avis</h2>
+<div class="score"><b>4,4</b><div><div class="stars" role="img" aria-label="4,4 sur 5">★★★★☆</div><div>Plus de 3 300 avis Google</div></div></div>
+<a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Chez+nous+les+Libanais+Toulouse">Lire les avis</a>
+</div>
+</section>
+
+<section id="venir">
+<div class="wrap">
+<h2>Nous trouver</h2>
+<p class="sub">Dans le quartier Esquirol, en plein centre de Toulouse.</p>
+<div class="info">
+<div><h3>Adresse</h3><p><a class="big" href="https://www.google.com/maps/search/?api=1&amp;query=6+Rue+Jean+Suau+31000+Toulouse">6 rue Jean Suau<br>31000 Toulouse</a></p></div>
+<div><h3>Téléphone</h3><p><a class="big" href="tel:+33767039603">07 67 03 96 03</a></p></div>
+<div><h3>Horaires</h3><p>Tous les jours, de 12h à 23h30.</p></div>
+<div><h3>Venir</h3><p>Métro Esquirol, ligne A.</p></div>
+</div>
+</div>
+</section>
+
+<footer><div class="wrap"><b>Chez nous les Libanais</b>6 rue Jean Suau, 31000 Toulouse</div></footer>
+
+<nav class="bar" aria-label="Actions rapides"><a href="tel:+33767039603">Appeler</a><a href="https://www.google.com/maps/search/?api=1&amp;query=6+Rue+Jean+Suau+31000+Toulouse">Itinéraire</a></nav>
+</body>
+</html>
